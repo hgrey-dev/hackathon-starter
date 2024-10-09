@@ -18,7 +18,8 @@
     "lint": "eslint \"**/*.js\"",
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
     "scss": "sass --no-source-map --load-path=./ --update ./public/css:./public/css",
-    "lintStage": "node_modules/.bin/lint-staged"
+    "lintStage": "node_modules/.bin/lint-staged",
+    "dev": "nodemon app.js" 
   },
   "lint-staged": {
     "*.js": [
@@ -55,10 +56,12 @@
     "lusca": "^1.7.0",
     "mailchecker": "^5.0.9",
     "moment": "^2.29.4",
+    "mongodb": "^6.9.0",
     "mongoose": "^7.6.3",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.6",
+    "nodemon": "^3.1.7",
     "passport": "^0.6.0",
     "passport-facebook": "^3.0.0",
     "passport-github2": "^0.1.12",

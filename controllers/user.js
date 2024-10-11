@@ -161,7 +161,16 @@ exports.getAccount = (req, res) => {
     title: 'Account Management'
   });
 };
-
+/**
+ * GET /members
+ * Members List.
+ */
+exports.getMembers = (req, res) => {
+  res.render('members', {
+    title: 'Members List'
+  });
+  
+};
 /**
  * POST /account/profile
  * Update profile information.

@@ -165,12 +165,19 @@ exports.getAccount = (req, res) => {
  * GET /members
  * Members List.
  */
-exports.getMembers = (req, res) => {
-  res.render('members', {
-    title: 'Members List'
-  });
-  
+exports.getMembers = async (req, res, next) => {
+  try {
+    const users = await User.find(); 
+    res.render('members', {
+      title: 'Members List',
+      users: users 
+    });
+  } catch (err) {
+    next(err);
+  }
 };
+
+
 /**
  * POST /account/profile
  * Update profile information.

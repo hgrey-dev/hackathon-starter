@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Members List
+
+  ul
+    each user in users
+      li
+        strong Name: 
+        | #{user.profile.name || 'N/A'} 
+        br
+        strong Email: 
+        | #{user.email}
+        br
+        strong Location: 
+        | #{user.profile.location || 'N/A'}
+        br
+        hr

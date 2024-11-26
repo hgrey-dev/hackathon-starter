@@ -161,6 +161,22 @@ exports.getAccount = (req, res) => {
     title: 'Account Management'
   });
 };
+/**
+ * GET /members
+ * Members List.
+ */
+exports.getMembers = async (req, res, next) => {
+  try {
+    const users = await User.find(); 
+    res.render('members', {
+      title: 'Members List',
+      users: users 
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+
 
 /**
  * POST /account/profile

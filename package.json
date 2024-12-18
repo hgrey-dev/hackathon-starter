@@ -19,7 +19,7 @@
     "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then husky install; fi",
     "scss": "sass --no-source-map --load-path=./ --update ./public/css:./public/css",
     "lintStage": "node_modules/.bin/lint-staged",
-    "dev": "nodemon app.js" 
+    "dev": "nodemon app.js"
   },
   "lint-staged": {
     "*.js": [
@@ -44,6 +44,7 @@
     "cheerio": "^1.0.0-rc.10",
     "compression": "^1.7.4",
     "connect-mongo": "^5.1.0",
+    "docker": "^1.0.0",
     "dotenv": "^16.3.1",
     "errorhandler": "^1.5.1",
     "express": "^4.18.2",
@@ -77,7 +78,7 @@
     "pug": "^3.0.2",
     "sass": "^1.69.3",
     "stripe": "^14.1.0",
-    "twilio": "^4.18.1",
+    "twilio": "^5.4.0",
     "twitch-passport": "^1.0.6",
     "validator": "^13.11.0"
   },

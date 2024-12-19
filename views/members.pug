@@ -5,14 +5,9 @@ block content
 
   ul
     each user in users
-      li
+        br
         strong Name: 
-        | #{user.profile.name || 'N/A'} 
+        | #{user.profile.name} 
+        li.nav-item
+          a.nav-link(class=(title === 'Members') ? 'active' : '', href='/members') View Profile
         br
-        strong Email: 
-        | #{user.email}
-        br
-        strong Location: 
-        | #{user.profile.location || 'N/A'}
-        br
-        hr

@@ -138,7 +138,10 @@ exports.postSignup = async (req, res, next) => {
     }
     const user = new User({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      profile: {
+        name: req.body.name
+      }
     });
     await user.save();
     req.logIn(user, (err) => {
@@ -170,6 +173,21 @@ exports.getMembers = async (req, res, next) => {
     const users = await User.find(); 
     res.render('members', {
       title: 'Members List',
+      users: users 
+    });
+  } catch (err) {
+    next(err);
+  }
+};
+/**
+ * GET /memberProfile
+ * Member Profile.
+ */
+exports.getMemberProfile = async (req, res, next) => {
+  try {
+    const users = await User.findOne(); 
+    res.render('memberProfile', {
+      title: 'Member Profile',
       users: users 
     });
   } catch (err) {

@@ -185,10 +185,10 @@ exports.getMembers = async (req, res, next) => {
  */
 exports.getMemberProfile = async (req, res, next) => {
   try {
-    const users = await User.findOne(); 
+    const profileUser = await User.findById(req.params.id); 
     res.render('memberProfile', {
-      title: 'Member Profile',
-      users: users 
+      title: `${profileUser.profile.name}'s Profile`,
+      profileUser
     });
   } catch (err) {
     next(err);

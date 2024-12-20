@@ -1,9 +1,14 @@
 extends layout
 
 block content
-  h1 John's Profile 
+  .pb-2.mt-2.mb-4.border-bottom
+    h1 #{profileUser.profile.name}'s Profile
     br
-    strong Name: 
-    | #{user.profile.name} 
+    .col-sm-4.mb-2
+        img(src=profileUser.gravatar(), class='profile', width='100', height='100')
+    dl.row
+    dt.col-sm-3 Full Name
+    dd.col-sm-9 #{profileUser.profile.name}
     br
-    | #{user.email}
+    dt.col-sm-3 Email
+    | #{profileUser.email}

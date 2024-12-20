@@ -8,6 +8,6 @@ block content
         br
         strong Name: 
         | #{user.profile.name} 
-        li.nav-item
-          a.nav-link(class=(title === 'Members') ? 'active' : '', href='/memberProfile') View Profile
+        td
+            a.btn.btn-primary.btn-sm(href=`/members/${user._id}`) View Profile
         br

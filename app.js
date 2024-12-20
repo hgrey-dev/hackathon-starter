@@ -155,6 +155,7 @@ app.get('/account/verify', passportConfig.isAuthenticated, userController.getVer
 app.get('/account/verify/:token', passportConfig.isAuthenticated, userController.getVerifyEmailToken);
 app.get('/account', passportConfig.isAuthenticated, userController.getAccount);
 app.get('/members', passportConfig.isAuthenticated, userController.getMembers)
+app.get('/memberProfile', passportConfig.isAuthenticated, userController.getMemberProfile)
 app.post('/account/profile', passportConfig.isAuthenticated, userController.postUpdateProfile);
 app.post('/account/password', passportConfig.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);

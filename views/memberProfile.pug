@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .pb-2.mt-2.mb-4.border-bottom
+    h1 #{profileUser.profile.name}'s Profile
+    br
+    .col-sm-4.mb-2
+        img(src=profileUser.gravatar(), class='profile', width='100', height='100')
+    dl.row
+    dt.col-sm-3 Full Name
+    dd.col-sm-9 #{profileUser.profile.name}
+    br
+    dt.col-sm-3 Email
+    | #{profileUser.email}

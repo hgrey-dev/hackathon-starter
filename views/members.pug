@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1 Member's List
+  h1.text-center.mb-4.text-uppercase Member's List
 
   ul
     each user in users
@@ -9,5 +9,5 @@ block content
         strong Name: 
         | #{user.profile.name} 
         td
-            a.btn.btn-primary.btn-sm(href=`/members/${user._id}`) View Profile
+            a(href=`/members/${user._id}`) View Profile
         br

@@ -194,7 +194,7 @@ exports.getMemberProfile = async (req, res, next) => {
     next(err);
   }
 };
-
+ 
 
 /**
  * POST /account/profile

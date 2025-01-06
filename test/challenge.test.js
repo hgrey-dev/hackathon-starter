@@ -62,6 +62,7 @@ function nextLarger(int) {
   if (i < 0) return -1;
 
   // Find the next larger digit and swap them
+  let n = arrayOfNumbers.length - 1;
   while (arrayOfNumbers[n] <= arrayOfNumbers[i]) {
       n--;
   }
@@ -71,7 +72,7 @@ function nextLarger(int) {
   let left = arrayOfNumbers.slice(0, i + 1);
   let right = arrayOfNumbers.slice(i + 1).sort();
 
-  return parseInt(left.concat(right).noin(""), 10);
+  return parseInt(left.concat(right).join(""), 10);
 };
 
 describe("Challenge 3", () => {
